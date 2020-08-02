@@ -13,7 +13,7 @@ const Counter = props => {
     <div>
       <button onClick={increamentCounter}>+</button>
       <button onClick={decreamentCounter}>-</button>
-      <span>counter-1: </span>
+      <span>{props.name}</span>
       <span>{props.counter}</span>
     </div>
   );

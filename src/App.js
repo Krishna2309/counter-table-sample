@@ -25,11 +25,31 @@ export default function App() {
 
   return (
     <div className="App">
-      <Counter counter={counter1} setCounter={setCounter1} />
-      <Counter counter={counter2} setCounter={setCounter2} />
-      <Counter counter={counter3} setCounter={setCounter3} />
-      <Counter counter={counter4} setCounter={setCounter4} />
-      <Counter counter={counter5} setCounter={setCounter5} />
+      <Counter
+        counter={counter1}
+        setCounter={setCounter1}
+        name={"Counter-1: "}
+      />
+      <Counter
+        counter={counter2}
+        setCounter={setCounter2}
+        name={"Counter-2: "}
+      />
+      <Counter
+        counter={counter3}
+        setCounter={setCounter3}
+        name={"Counter-3: "}
+      />
+      <Counter
+        counter={counter4}
+        setCounter={setCounter4}
+        name={"Counter-4: "}
+      />
+      <Counter
+        counter={counter5}
+        setCounter={setCounter5}
+        name={"Counter-5: "}
+      />
       <div>
         <div>
           <span>Total Sum: </span>
