@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./styles.css";
+import Counter from "./Counter";
 
 export default function App() {
   const [counter1, setCounter1] = useState(0);
@@ -11,14 +12,6 @@ export default function App() {
   const [average, setAverage] = useState(0);
   const [max, setMax] = useState(0);
   const [min, setMin] = useState(0);
-
-  const increamentCounter = (increamentValue, onIncreamentValue) => {
-    onIncreamentValue(++increamentValue);
-  };
-
-  const decreamentCounter = (decreamentValue, onDecreamentvalue) => {
-    onDecreamentvalue(--decreamentValue);
-  };
 
   useEffect(() => {
     setSum(counter1 + counter2 + counter3 + counter4 + counter5);
@@ -32,97 +25,11 @@ export default function App() {
 
   return (
     <div className="App">
-      <div>
-        <button
-          onClick={() => {
-            increamentCounter(counter1, setCounter1);
-          }}
-        >
-          +
-        </button>
-        <button
-          onClick={() => {
-            decreamentCounter(counter1, setCounter1);
-          }}
-        >
-          -
-        </button>
-        <span>counter-1: </span>
-        <span>{counter1}</span>
-      </div>
-      <div>
-        <button
-          onClick={() => {
-            increamentCounter(counter2, setCounter2);
-          }}
-        >
-          +
-        </button>
-        <button
-          onClick={() => {
-            decreamentCounter(counter2, setCounter2);
-          }}
-        >
-          -
-        </button>
-        <span>counter-2: </span>
-        <span>{counter2}</span>
-      </div>
-      <div>
-        <button
-          onClick={() => {
-            increamentCounter(counter3, setCounter3);
-          }}
-        >
-          +
-        </button>
-        <button
-          onClick={() => {
-            decreamentCounter(counter3, setCounter3);
-          }}
-        >
-          -
-        </button>
-        <span>counter-3: </span>
-        <span>{counter3}</span>
-      </div>
-      <div>
-        <button
-          onClick={() => {
-            increamentCounter(counter4, setCounter4);
-          }}
-        >
-          +
-        </button>
-        <button
-          onClick={() => {
-            decreamentCounter(counter4, setCounter4);
-          }}
-        >
-          -
-        </button>
-        <span>counter-4: </span>
-        <span>{counter4}</span>
-      </div>
-      <div>
-        <button
-          onClick={() => {
-            increamentCounter(counter5, setCounter5);
-          }}
-        >
-          +
-        </button>
-        <button
-          onClick={() => {
-            decreamentCounter(counter5, setCounter5);
-          }}
-        >
-          -
-        </button>
-        <span>counter-5: </span>
-        <span>{counter5}</span>
-      </div>
-
+      <Counter counter={counter1} setCounter={setCounter1} />
+      <Counter counter={counter2} setCounter={setCounter2} />
+      <Counter counter={counter3} setCounter={setCounter3} />
+      <Counter counter={counter4} setCounter={setCounter4} />
+      <Counter counter={counter5} setCounter={setCounter5} />
       <div>
         <div>
           <span>Total Sum: </span>
